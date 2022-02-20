@@ -57,5 +57,5 @@ jobs:
         git config --global user.name "Action-Push"
         git add template.pdf
         git commit -m "Auto-generated PDF commit"
-        git checkout -b file
-        git push origin file
+        #git checkout -b file
+        git push origin main
