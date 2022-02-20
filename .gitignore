@@ -1,0 +1,14 @@
+\.vscode
+*.exe
+*.cpp
+\bin
+all.md
+*.pdf
+/pandoc/t.*
+\_minted-t
+t.*
+t.tex
+/pandoc/*-*.md
+/vscode
+/_minted-template
+template.*
