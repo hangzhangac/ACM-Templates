@@ -45,15 +45,15 @@ jobs:
     - name: Generate PDF
       run: |
         mkdir -p ~/.pandoc/templates
-        cp pandoc/algo.latex ~/.pandoc/templates/
-        sh pandoc/gen.sh
-    - name: Deploy
-      run: |
-        git clone -b gh-pages https://oauth2:${{secrets.ACCESS_TOKEN}}@github.com/F0RE1GNERS/template /tmp/template
-        cp template.pdf /tmp/template/
-        cd /tmp/template
-        git add template.pdf
-        git config --global user.email "bot@foreigners.io"
-        git config --global user.name "F0RE1GNERS BOT"
-        git commit -m "Auto-generated PDF commit"
-        git push
+        cp templates/algo.latex ~/.pandoc/templates/
+        sh gen.sh
+        #- name: Deploy
+        #  run: |
+        #    git clone -b gh-pages https://oauth2:${{secrets.ACCESS_TOKEN}}@github.com/F0RE1GNERS/template /tmp/template
+        #    cp template.pdf /tmp/template/
+        #    cd /tmp/template
+        #    git add template.pdf
+        #    git config --global user.email "bot@foreigners.io"
+        #    git config --global user.name "F0RE1GNERS BOT"
+        #    git commit -m "Auto-generated PDF commit"
+        #    git push
